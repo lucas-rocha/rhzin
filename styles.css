@@ -248,13 +248,14 @@ h6 {
   min-width: 200px;
 }
 
-.card-title {
+.floating-card__title {
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
-.card-subtitle {
+.floating-card__subtitle {
   font-size: 12px;
   opacity: 0.9;
 }
@@ -533,6 +534,7 @@ h6 {
 
 .process-steps {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   margin: 0 auto;
 }
@@ -548,6 +550,7 @@ h6 {
   border: 1px solid #e5e5e5;
   transition: all 0.3s ease;
   text-align: center;
+  flex: 1;
 }
 
 .step:hover {
@@ -944,4 +947,229 @@ h6 {
   .hero-buttons {
     flex-direction: column;
   }
+}
+
+
+
+
+
+.contact-section {
+  padding: 80px 0;
+  background: linear-gradient(90deg, #f8f1eb 0%, #faf6f2 50%, #ffffff 100%);
+}
+
+/* Header da seção */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-title .highlight {
+  color: #b45309;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Cards de contato */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  width: 64px;
+  height: 64px;
+  background: #fef3e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #b45309;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.card-info {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  background: transparent;
+  border: 2px solid #b45309;
+  color: #b45309;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.card-button:hover {
+  background: #b45309;
+  color: white;
+}
+
+/* Seção de reunião */
+.meeting-section {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.meeting-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.meeting-title .highlight {
+  color: #b45309;
+}
+
+.meeting-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.meeting-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-placeholder {
+  width: 100%;
+  height: 200px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #d1d5db;
+}
+
+.placeholder-icon {
+  color: #9ca3af;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .meeting-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .meeting-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contact-card {
+    padding: 24px 20px;
+  }
+
+  .meeting-section {
+    padding: 24px 16px;
+  }
+}
+
+.meeting-benefits {
+  margin-top: 1rem;
+}
+
+.meeting-benefits > li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.meeting-benefits > li > span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #dc3dd5;
+  border-radius: 50%;
+}
+
+.meeting-benefits__buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
