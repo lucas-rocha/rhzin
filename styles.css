@@ -513,7 +513,8 @@ h6 {
 .solutions-note {
   text-align: center;
   padding: 20px;
-  background: white;
+  background: #e91e63;
+  color: white;
   border-radius: 8px;
   border: 1px solid #e5e5e5;
 }
